@@ -1,0 +1,29 @@
+#home {
+  flex-grow: 1;
+}
+
+#home-form input[type="text"] {
+  padding: 13px 35px;
+  border: 2px solid var(--oscuro);
+  border-radius: 9999px 0 0 9999px;
+  outline: none;
+  font-size: 18px;
+}
+
+#home-form input[type="submit"] {
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid var(--oscuro);
+  border-left: 0;
+  border-radius: 0 9999px 9999px 0;
+  background-color: var(--medio);
+  color: var(--blanco);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+#home-form input[type="submit"]:hover,
+#home-form input[type="submit"]:active {
+  background-color: var(--oscuro);
+}

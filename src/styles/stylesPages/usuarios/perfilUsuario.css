@@ -1,0 +1,58 @@
+.perfil-usuario {
+  flex-grow: 1;
+  background-color: var(--verde);
+}
+
+/* .perfil-usuario h1 {
+  line-height: 1 !important;
+  word-break: break-all;
+} */
+
+/**** DIV HACER PREGUNTA ****/
+.usuario-hacer-pregunta {
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/**** DIV RESPUESTAS ****/
+.usuario-respuestas {
+  margin-top: 25px;
+  padding: 0 15px 10px;
+}
+
+
+
+.usuario-presentacion {
+  border-bottom: 4px solid var(--medio);
+}
+
+.usuario-identificacion-2 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.foto-usuario {
+  display: inline;
+  width: 95px;
+  height: 95px;
+  border: 2px solid var(--blanco);
+  border-radius: 50%;
+}
+
+.usuario-identificacion * {
+  margin: 0;
+  padding: 0;
+}
+
+.usuario-identificacion h1 {
+  color: var(--blanco);
+}
+
+.usuario-identificacion p {
+  font-weight: 500;
+}

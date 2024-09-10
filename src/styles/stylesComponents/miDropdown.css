@@ -1,0 +1,43 @@
+.midropdown {
+  position: relative;
+  height: 45px;
+}
+
+.midropdown-btn {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.midropdown input[type="checkbox"] {
+  display: none;
+}
+
+.midropdown-btn .midropdown-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2.5px solid var(--oscuro);
+}
+
+.midropdown .midropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 120px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--claro);
+}
+
+.midropdown a {
+  display: block;
+  padding: 5px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--blanco);
+}
+
+.midropdown a:hover,
+.midropdown a:active {
+  background-color: var(--oscuro);
+}

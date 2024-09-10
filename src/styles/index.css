@@ -1,0 +1,241 @@
+:root {
+  --negro: #0a0a0a;
+  --blanco: #f2f2f2;
+  --gris: #bfbcbd;
+  --oscuro: #259686;
+  --medio: #51aa92;
+  --claro: #7dbe9e;
+  --verde: #aad3aa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--blanco);
+}
+
+figure {
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0px !important;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#main-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.mi-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-bottom: 59px;
+}
+
+p {
+  color: var(--negro);
+}
+
+.blanco {
+  color: var(--blanco) !important;
+}
+
+.oscuro {
+  color: var(--oscuro) !important;
+}
+
+.medio {
+  color: var(--medio) !important;
+}
+
+.claro {
+  color: var(--claro) !important;
+}
+
+.verde {
+  color: var(--verde) !important;
+}
+
+.negro {
+  color: var(--negro) !important;
+}
+
+.bg-blanco {
+  background-color: var(--blanco) !important;
+}
+
+.bg-oscuro {
+  background-color: var(--oscuro) !important;
+}
+
+.bg-medio {
+  background-color: var(--medio) !important;
+}
+
+.bg-claro {
+  background-color: var(--claro) !important;
+}
+
+.bg-verde {
+  background-color: var(--verde) !important;
+}
+
+.bg-negro {
+  background-color: var(--negro) !important;
+}
+
+.bg-gris {
+  background-color: var(--gris) !important;
+}
+
+.bg-gradient {
+  background: var(--blanco) !important;
+  background: linear-gradient(135deg, var(--verde) 0%, #e7fbe7 55%) !important;
+}
+
+.position-relative {
+  position: relative;
+}
+
+input:not([type="submit"]) {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  outline: none;
+}
+
+input:not([type="submit"]):focus {
+  outline: 2px solid var(--medio) !important;
+}
+
+
+/*quita el background-color que chrome agrega al enviar un form en los inputs*/
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
+.boton {
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: var(--oscuro);
+  text-align: center;
+  font-weight: 500;
+  color: var(--blanco);
+  letter-spacing: .3px;
+}
+
+.boton:active,
+.boton:hover {
+  background-color: var(--medio);
+}
+
+.boton-img {
+  all: unset;
+  cursor: pointer;
+  display: inline;
+  background-color: transparent;
+}
+
+.boton-outline {
+  padding: 8px 9px;
+  border: 1.5px solid var(--oscuro);
+  border-radius: 5px;
+  background-color: transparent;
+  text-align: center;
+  font-weight: 500;
+  color: var(--oscuro);
+  letter-spacing: .3px;
+}
+
+.boton-outline:active,
+.boton-outline:hover {
+  background-color: var(--medio);
+  border-color: var(--medio);
+  color: var(--blanco);
+}
+
+.grupo-input {
+  display: flex;
+  width: 100%;
+}
+
+.formulario {
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--blanco);
+}
+
+.formulario input:not([type="submit"]) {
+  border-radius: 9999px;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.formulario input:not([type="submit"]):focus {
+  outline: 3px solid var(--oscuro) !important;
+}
+
+.formulario input[type="submit"] {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9999px;
+  background-color: var(--oscuro);
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: .3px;
+}
+
+.formulario input[type="submit"]:hover,
+.formulario input[type="submit"]:active {
+  background-color: var(--medio);
+}
+
+.mensaje-usuario-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 75%;
+  max-width: 1200px;
+}
+
+@media (max-width: 576px) {
+  .mensaje-usuario-container {
+    width: 98%;
+  }
+}
+
+.mensaje-usuario-container p {
+  padding: 10px !important;
+}

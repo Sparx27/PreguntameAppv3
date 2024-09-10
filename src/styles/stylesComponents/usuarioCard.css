@@ -1,0 +1,24 @@
+.usuario-card {
+  display: grid;
+  grid-template-columns: 70px auto 61px;
+  align-items: center;
+  gap: 12px;
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--blanco);
+  border-radius: 8px;
+  border: 2px solid var(--claro);
+}
+
+.usuario-card p {
+  line-height: 1;
+}
+
+.usuario-foto-container {
+  width: 70px;
+  height: 70px;
+}
+
+.usuario-card-foto {
+  border-radius: 50%;
+}

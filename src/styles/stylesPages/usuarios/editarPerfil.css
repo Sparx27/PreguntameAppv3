@@ -1,0 +1,75 @@
+.card-datos {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1.5px solid var(--claro);
+  border-radius: 8px;
+  background-color: var(--verde);
+}
+
+.opt-titulo {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--oscuro) !important;
+}
+
+.card-datos textarea {
+  resize: none;
+  width: 100%;
+  height: 125px;
+  margin-bottom: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.card-datos textarea:focus {
+  outline-color: var(--medio);
+}
+
+
+.card-datos button {
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.editar-opt p {
+  font-size: 20px;
+}
+
+.card-datos input {
+  padding: 5px 10px;
+}
+
+.foto-perfil-usuario {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 150px !important;
+  height: 150px !important;
+  background-color: var(--blanco);
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.cambiar-foto-perfil-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px !important;
+  height: 65px;
+  padding: 4px;
+  border-radius: 45%;
+  opacity: .75;
+  background-color: white;
+}
+
+.foto-perfil-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

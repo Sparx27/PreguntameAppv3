@@ -1,0 +1,7 @@
+#registro {
+  flex-grow: 1;
+}
+
+#registro .form-img-container {
+  background-color: #8cbfb6 !important;
+}
