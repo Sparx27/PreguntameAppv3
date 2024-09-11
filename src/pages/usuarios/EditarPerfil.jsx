@@ -128,7 +128,6 @@ function EditarPerfil() {
           setMostrarModal(false)
         }
         catch (error) {
-          console.log(error.message.message)
           const yaManejoError = traducirError(error, setUsuarioLog, setMensajeUsuario, navegar)
           if (!yaManejoError) {
             setMensajeUsuario({ mensaje: error.message.message })

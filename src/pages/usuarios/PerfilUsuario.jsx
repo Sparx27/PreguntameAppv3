@@ -54,8 +54,6 @@ function PerfilUsuario({ routeParams }) {
 
     // Agregar validaciones a Dsc
 
-    console.log(dscPregunta)
-
     try {
       const res = await fetchPostPregunta({
         usuarioRecibe: usuario.username,
@@ -115,7 +113,7 @@ function PerfilUsuario({ routeParams }) {
 
           {
             usuario && <div className="col-12 px-4 mt-1">
-              <p>{usuario.bio ?? 'Sin bio'}</p>
+              <p>{usuario.bio}</p>
             </div>
           }
 

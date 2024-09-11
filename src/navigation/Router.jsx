@@ -27,7 +27,7 @@ function Router({ children, defaultComponent: DefaultComponent = ({ code }) => <
       window.removeEventListener('pushstate', notificaciones)
       window.removeEventListener('popstate', notificaciones)
     }
-  }, [])
+  }, [haySesion])
 
   const liRoutes = Children.map(children, (hijo) => {
     if (hijo.type.displayName != 'Route') return null

@@ -1,7 +1,6 @@
 const INTERACCIONES_URL = 'https://localhost:7075/api/interacciones/'
 
 export const fetchPostPregunta = async (pregunta) => {
-  console.log('fetch: ', pregunta)
   try {
     const res = await fetch(INTERACCIONES_URL + 'enviar-pregunta', {
       method: 'POST',

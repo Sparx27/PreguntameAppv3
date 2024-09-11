@@ -26,7 +26,6 @@ function Respuesta({ respuesta }) {
       await fetchLike(respuesta.respuestaID, respuesta.usuarioRecibe)
     }
     catch (error) {
-      console.log('error: ', error)
       const yaManejoError = traducirError(error, setUsuarioLog, setMensajeUsuario, navegar)
       if (!yaManejoError) {
         setMensajeUsuario({ mensaje: error.message })

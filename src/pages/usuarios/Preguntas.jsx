@@ -20,14 +20,13 @@ function Preguntas() {
 
         const res = await fetchGetPreguntas()
         if (res.length > 0) {
-          res.sort((a, b) => new Date(a.fecha) - new Date(b.fecha))
+          res.sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
           setLiPreguntas(res)
         }
       }
       catch (error) {
         const yaManejoError = traducirError(error, setUsuarioLog, setMensajeUsuario, navegar)
         if (!yaManejoError) {
-          console.log('entro')
           setMensajeUsuario({ mensaje: error.message })
         }
       }
