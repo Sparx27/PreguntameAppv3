@@ -28,7 +28,7 @@ export const fetchPostPregunta = async (pregunta) => {
   }
 }
 
-export const fetchLike = async (idRespuesta) => {
+export const fetchLike = async (idRespuesta, usernameUsuarioRecibe) => {
   try {
     const res = await fetch(INTERACCIONES_URL + 'like-pregunta', {
       method: 'POST',
@@ -36,7 +36,8 @@ export const fetchLike = async (idRespuesta) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        idRespuesta: idRespuesta
+        idRespuesta: idRespuesta,
+        usernameUsuarioRecibe: usernameUsuarioRecibe
       }),
       credentials: 'include'
     })

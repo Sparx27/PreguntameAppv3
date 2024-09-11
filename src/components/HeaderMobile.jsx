@@ -13,9 +13,10 @@ import MiDropDown from '../components/MiDropDown'
 import { fetchCerrarSesion } from '../fetch/usuarios'
 import registroIcon from '../assets/header_icons/registro_icon.webp'
 import { traducirError } from '../helpers/erroresFetch'
+import ContadorPreguntas from './ContadorPreguntas'
 
 function HeaderMobile() {
-  const { haySesion, setUsuarioLog, usuarioLog, setMensajeUsuario, nPreguntas } = useContext(SesionContext)
+  const { haySesion, setUsuarioLog, usuarioLog, setMensajeUsuario } = useContext(SesionContext)
 
   const [busquedaUsuario, setBusquedaUsuario] = useState('')
 
@@ -95,14 +96,7 @@ function HeaderMobile() {
                 </Link> */}
                 <Link to='/usuario/preguntas' id='link-preguntas'>
                   <img src={preguntasicon} alt="preguntas" id='preguntas-icon' />
-                  {
-                    typeof nPreguntas == 'number' && nPreguntas > 0 && <div id='n-preguntas'>
-                      {
-                        typeof nPreguntas == 'number' && <p id='contador-preguntas'>{nPreguntas}</p>
-                      }
-                    </div>
-                  }
-
+                  <ContadorPreguntas />
                 </Link>
                 <Link to={`/usuarios/perfil/${usuarioLog?.username}`}>
                   <img src={perfilicon} alt="perfil" />

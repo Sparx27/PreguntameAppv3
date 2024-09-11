@@ -14,6 +14,8 @@ function Respuesta({ respuesta }) {
   const [nLikes, setNLikes] = useState(respuesta.nlikes)
   const { haySesion, setUsuarioLog, setMensajeUsuario } = useContext(SesionContext)
 
+  console.log(respuesta)
+
   async function enviarLike() {
     setToggleLike(!toggleLike)
     if (toggleLike) {
@@ -23,7 +25,7 @@ function Respuesta({ respuesta }) {
       setNLikes(nLikes + 1)
     }
     try {
-      await fetchLike(respuesta.respuestaID)
+      await fetchLike(respuesta.respuestaID, respuesta.usuarioRecibe)
     }
     catch (error) {
       console.log('error: ', error)
