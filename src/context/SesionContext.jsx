@@ -1,7 +1,5 @@
 import { createContext, useEffect, useState } from "react"
 import { fetchGetNPreguntas } from "../fetch/usuarios";
-import { traducirError } from "../helpers/erroresFetch";
-import { navegar } from "../navigation/navegar";
 
 export const SesionContext = createContext()
 
@@ -15,7 +13,6 @@ function SesionProvider({ children }) {
   const [nPreguntas, setNPreguntas] = useState(null)
 
   useEffect(() => {
-    console.log('sesioneffect')
     if (usuarioLog == null) {
       window.localStorage.removeItem('usuario')
       setHaySesion(false)
@@ -38,7 +35,6 @@ function SesionProvider({ children }) {
   }, [mensajeUsuario])
 
   async function obtenerNumeroPreguntas() {
-    console.log('preguntas')
     try {
       const res = await fetchGetNPreguntas()
       setNPreguntas(res.nPreguntas)

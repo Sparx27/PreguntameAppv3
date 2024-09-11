@@ -10,16 +10,22 @@ function Router({ children, defaultComponent: DefaultComponent = ({ code }) => <
   useEffect(() => {
     function alCambiarPath() {
       setPathActual(window.location.pathname)
+    }
+    async function notificaciones() {
       if (haySesion) {
         obtenerNumeroPreguntas()
       }
     }
     window.addEventListener('pushstate', alCambiarPath)
+    window.addEventListener('pushstate', notificaciones)
     window.addEventListener('popstate', alCambiarPath)
+    window.addEventListener('popstate', notificaciones)
 
     return () => {
       window.removeEventListener('pushstate', alCambiarPath)
       window.removeEventListener('popstate', alCambiarPath)
+      window.removeEventListener('pushstate', notificaciones)
+      window.removeEventListener('popstate', notificaciones)
     }
   }, [])
 

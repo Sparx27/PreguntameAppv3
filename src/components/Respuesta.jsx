@@ -14,8 +14,6 @@ function Respuesta({ respuesta }) {
   const [nLikes, setNLikes] = useState(respuesta.nlikes)
   const { haySesion, setUsuarioLog, setMensajeUsuario } = useContext(SesionContext)
 
-  console.log(respuesta)
-
   async function enviarLike() {
     setToggleLike(!toggleLike)
     if (toggleLike) {
